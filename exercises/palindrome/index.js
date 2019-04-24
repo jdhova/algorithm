@@ -7,6 +7,21 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+
+
+// function palindrome(str) {
+//     let x = str.split('').reverse().join('')
+//     if (x === str ) return true
+// }
+
+// Making use of the every helper this checkes the value of each or 
+// every element in an array
+// 
+function palindrome(str) {
+   return  str.split('').every((chr , i) => {
+        return chr === str[str.length -i -1]
+        
+    })
+}
 
 module.exports = palindrome;

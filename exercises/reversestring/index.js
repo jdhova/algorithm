@@ -6,6 +6,14 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+
+// jest reversestring/test.js --watch
+
+function reverse(str) {
+   return str.split('').reverse().join('')
+}   
+  
+  reverse('jude')
+
 
 module.exports = reverse;
