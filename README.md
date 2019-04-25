@@ -1,21 +1,24 @@
-# AlgoCasts
+# AlgoCasts JavScript Algorithms and Data Structures
 
-jest reversestring/test.js --watch
+# Some Usleful JavaScript Helpers
 
-jest maxchar/test.js --watch
+# To test run
+jest exercise/test.js --watch
+Exampple: jest fizzbuzz/test.js --watch
 
-Companion repo to a course on Udemy.com
-Some useful JavaScript helpers 
-
+# Math.sign() helper
 Math.sign()  helps transform numbers to -1
  551 * Math.sign() = -1
-
 reversing a negetive integer in 1 line with Math.sign()
 
 function reverseInt(n) {
    return parseInt(n.toString().split('').reverse().join('')) * Math.sign(n)
 }
-reverseInt(-551)
+reverseInt(-551)  returns -155
+
+
+
+
 
 
 
