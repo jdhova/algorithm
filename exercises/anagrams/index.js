@@ -13,12 +13,11 @@
 function anagrams (stringA, stringB) {
 
    return  cleanStr(stringA) === cleanStr(stringB) 
-   
-    
+      
 }
 
 function cleanStr(str) {
-    return str.replace(/[^\w]/g, '').toLowercase().split('').sort().join('')
+    return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
 }
 
 
