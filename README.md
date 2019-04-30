@@ -22,6 +22,10 @@ const word = "HELLO THERE!!!!"
 word.replace(/[^ \w]/g, "")  returns HELLO THERE without the !!!
 word.replace(/[^\w]/g, "")    returns HELLOTHERE without the space and !!!
 
+str.match(/[aeiou]/g)  checks if str includes or letters in str match aeiou (case sensitive)
+
+str.match(/[aeiou]/gi)  checks if str includes or letters in str match aeiou (case in-sensitive)
+
 when convarting  strings to objects tenery operators like 
 x[n] = x[n] +1 || 1 
 takes less time to execute compared to if else statements
