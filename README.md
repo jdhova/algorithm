@@ -1,12 +1,12 @@
 # AlgoCasts JavScript Algorithms and Data Structures
 
-# Some Usleful JavaScript Helpers
+## Some Usleful JavaScript Helpers
 
-# To test run
+### To test run
 jest exercise/test.js --watch
 Exampple: jest fizzbuzz/test.js --watch
 
-## Math.sign() helper
+### Math.sign() helper
 Math.sign()  helps transform numbers to -1
  551 * Math.sign() = -1
 reversing a negetive integer in 1 line with Math.sign()
@@ -16,7 +16,7 @@ function reverseInt(n) {
 }
 reverseInt(-551)  returns -155
 
-## regex
+### Regex
 
 const word = "HELLO THERE!!!!"
 word.replace(/[^ \w]/g, "")  returns HELLO THERE without the !!!
@@ -24,11 +24,21 @@ word.replace(/[^\w]/g, "")    returns HELLOTHERE without the space and !!!
 
 str.match(/[aeiou]/g)  checks if str includes or letters in str match aeiou (case sensitive)
 
-str.match(/[aeiou]/gi)  checks if str includes or letters in str match aeiou (case in-sensitive)
+
+str.match(/[aeiou]/gi)  checks if str includes or letters in str match aeiou (case in-sensitive)  this is similar to the .include() helper
+
+
 
 when convarting  strings to objects tenery operators like 
 x[n] = x[n] +1 || 1 
 takes less time to execute compared to if else statements
+
+### Fibonacci Sequence with recursion
+
+function fib (n) {
+    if(n < 2) return n
+    return fib(n-1) + fib(n-2)  
+}
 
 
 
