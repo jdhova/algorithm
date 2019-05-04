@@ -40,6 +40,23 @@ function fib (n) {
     return fib(n-1) + fib(n-2)  
 }
 
+### Data Structures Stacks and Queue
+
+Stacks Last in First out LIFO
+Queue  First in First out FIFO
+
+pop removes and push adds to the end while 
+shift removes and unshifts adds to the beginig of an array
+
+unshift() adds to the begining of the array
+
+shift() removes to the begining of the array
+
+pop() removes to the end of the array
+
+push() adds to the end of the array
+
+
 
 
         

@@ -13,13 +13,26 @@ class Queue {
         this.data = []
 
     }
-    add(info){
-        this.data.unshift(info)
-    }
-
-     remove() {
-        return  this.data.pop()
-    }
+     add(info){
+         this.data.unshift(info)
+     } 
+   
+     remove(info) {
+     return    this.data.pop(info)
+     }
 }
 
 module.exports = Queue;
+
+
+// constructor(){
+//     this.data = []
+
+// }
+// add(info){
+//     this.data.unshift(info)
+// }
+
+//  remove() {
+//     return  this.data.pop()
+// }
