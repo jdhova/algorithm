@@ -19,7 +19,9 @@ reverseInt(-551)  returns -155
 ### Regex
 
 const word = "HELLO THERE!!!!"
+
 word.replace(/[^ \w]/g, "")  returns HELLO THERE without the !!!
+
 word.replace(/[^\w]/g, "")    returns HELLOTHERE without the space and !!!
 
 str.match(/[aeiou]/g)  checks if str includes or letters in str match aeiou (case sensitive)
