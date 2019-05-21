@@ -37,6 +37,14 @@ takes less time to execute compared to if else statements
 
 
 
+### Printing the Last digit of factorial with recursion
+
+function fact(n) {
+   if (n ===1) return n
+
+   return n * fact(n-1)
+}
+fact(8)
 
 ### Printing an array of factorial with loops
 
@@ -56,15 +64,6 @@ function fact (n) {
   return result
 }
 
-fact(8)
-
-### Printing the Last digit of factorial with recursion
-
-function fact(n) {
-   if (n ===1) return n
-
-   return n * fact(n-1)
-}
 fact(8)
 
 
@@ -96,6 +95,91 @@ for ( let i = 2; i <= n; i++)  {
 }
 
 fib(8)
+
+### Printing an array of the classical FizzBuzz test
+
+function fizzBuzz (n) {
+
+  let result = []
+
+  for (let i = 1;  result.length < n; i ++) {
+
+    if (i % 15 === 0) {
+    result.push('fizz buzz')
+  } else if ( i % 5 === 0) {
+    result.push('buzz')
+  } else if ( i % 3 === 0) {
+    result.push('fizz')
+  } else { 
+    result.push(i)
+  }
+
+  }
+    return result
+}
+
+fizzBuzz(16)
+
+### Memoized Factorial 
+
+const SlowFactorial = function input (n) {
+ 
+    if(n === 1) { return 1  
+  }; 
+  
+  return n * input(n-1);        
+
+ };
+
+ const fastFactorial = function fastFactorial(fn) {
+
+    const memory = {};
+
+    return function(...args) {
+      if(memory in args) {
+        return memory[args]
+      };
+
+      const result = fn.apply(this, args)
+      memory[args] = result
+
+      return result
+    };
+
+    
+ };
+
+ const factorial = fastFactorial(SlowFactorial);
+
+ ### Memoized Fibinacci Sequence
+
+const fastFib = function fastFib(fn){
+
+  const memory = {}
+
+  return function(...args){
+    if(memory[args]) {
+      return memory[args]
+    }
+
+    const result = fn.apply(this, args)
+    memory[args] = result
+
+    return result
+  }
+
+}
+
+const slowFib = function slowFib(n) {
+  if( n < 2 ) return n
+
+  return slowFib(n -1) + slowFib( n -2)
+}
+
+slowFib(8)
+
+const memoizedFib = fastFib(slowFib)
+
 
 
 
