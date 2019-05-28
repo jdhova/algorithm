@@ -9,12 +9,13 @@
 //     q.remove(); // returns 1;
 
 class Queue {
+    
     constructor(){
         this.data = []
 
     }
      add(info){
-         this.data.unshift(info)
+       return  this.data.unshift(info)
      } 
    
      remove(info) {

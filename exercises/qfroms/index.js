@@ -15,51 +15,89 @@
 const Stack = require('./stack');
 
 class Queue {
-    constructor(){
-        this.first = new Stack()
-        this.second = new Stack()
+
+    constructor() {
+        this.first = new Stack
+        this.second = new Stack
 
     }
 
-    add(info){
-        return this.first.push(info)
-    }
-
-    peek(){
-        this.first.info[this.first.length -1]
-        this.second.info[this.second.length -1]
-    }
+    add(result){
+        this.first.push(result)
+    };
 
     remove(){
-        // while(this.first[this.first.lenth != 0])
         while(this.first.peek()){
-            this.second.push(this.first.pop())
+            this.second.push(this.first.pop());
         }
+        const result = this.second.pop();
 
-        const record = this.second.pop()
-
-        while(this.second.peek()){
+        while (this.second.peek()) {
             this.first.push(this.second.pop())
         }
-        return record
-
+        return result;
     }
-
+    
     peek(){
-        while(this.first.peek()){
-            this.second.push(this.first.pop())
+            while(this.first.peek()){
+                this.second.push(this.first.pop())
+            }
+        
+            const record = this.second.peek()
+        
+            while(this.second.peek()){
+                this.first.push(this.second.pop())
+            }
+        
+            return record
         }
-
-        const record = this.second.peek()
-
-        while(this.second.peek()){
-            this.first.push(this.second.pop())
-        }
-
-        return record
-    }
-
-   
 }
 
 module.exports = Queue;
+
+
+
+// constructor(){
+//     this.first = new Stack()
+//     this.second = new Stack()
+
+// }
+
+// add(info){
+//     return this.first.push(info)
+// }
+
+// peek(){
+//     this.first.info[this.first.length -1]
+//     this.second.info[this.second.length -1]
+// }
+
+// remove(){
+//     // while(this.first[this.first.lenth != 0])
+//     while(this.first.peek()){
+//         this.second.push(this.first.pop())
+//     }
+
+//     const record = this.second.pop()
+
+//     while(this.second.peek()){
+//         this.first.push(this.second.pop())
+//     }
+//     return record
+
+// }
+
+// peek(){
+//     while(this.first.peek()){
+//         this.second.push(this.first.pop())
+//     }
+
+//     const record = this.second.peek()
+
+//     while(this.second.peek()){
+//         this.first.push(this.second.pop())
+//     }
+
+//     return record
+// }
+
