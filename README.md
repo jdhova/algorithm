@@ -69,32 +69,32 @@ fact(8)
 
 ### Printing the last digit of the Fibinicci sequence with recursion
 
-function fib(n) {
-     if ( n < 2) return n
+  function fib(n) {
+      if ( n < 2) return n
 
-     return fib(n-1) + fib (n-2)
-}
+      return fib(n-1) + fib (n-2)
+  }
 
-fib(8)
+  fib(8)
 
 
 ### Printing an array of Fibinacci sequence with Loops
 
-function fib(n) {
+  function fib(n) {
 
-let result = [0,1,]
+  let result = [0,1,]
 
-for ( let i = 2; i <= n; i++)  {
-  const a = result[result.length -1]
+  for ( let i = 2; i <= n; i++)  {
+    const a = result[result.length -1]
 
-    const b = result[result.length -2]
+      const b = result[result.length -2]
 
-    result.push(a+b)
+      result.push(a+b)
+    }
+    return  result
   }
-  return  result
-}
 
-fib(8)
+  fib(8)
 
 ### Printing an array of the classical FizzBuzz test
 
@@ -179,6 +179,37 @@ const slowFib = function slowFib(n) {
 slowFib(8)
 
 const memoizedFib = fastFib(slowFib)
+
+###  Recursion Solutions
+
+#### finding the greatest Multiple between two numbers 
+
+function gm(a,b){
+  if (!b) return a
+
+  return  gm(b, a%b)
+}
+gm(222, 628)
+
+#### Finding the power of a number
+
+function power(base, exp){
+  if(exp === 0) return 1
+
+  return base *(power(base, exp -1))
+}
+power(2,3)
+
+#### replicating a number 
+
+function replicateNum(times, num){
+  if (times <= 0) return []
+
+  return [num].concat(replicateNum(times -1, num))
+}
+
+replicateNum(3,4)
+
 
 
 
